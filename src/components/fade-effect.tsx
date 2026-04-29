@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import { cva, type VariantProps } from "class-variance-authority"
 
 const fadeEffectVariants = cva(
-  'absolute w-full h-1/3 bottom-0 left-0 from-transparent to-white z-50',
+  'absolute w-full h-1/3 bottom-0 left-0 from-transparent to-background z-50',
   {
     variants: {
       direction: {
@@ -12,8 +12,8 @@ const fadeEffectVariants = cva(
         right: 'bg-gradient-to-r'
       },
       color: {
-        white: 'to-white',
-        black: 'to-black',
+        background: 'to-background',
+        ink: 'to-ink',
         transparent: 'to-transparent',
         primary: 'to-primary',
         secondary: 'to-secondary'
@@ -26,7 +26,7 @@ const fadeEffectVariants = cva(
       }
     },
     defaultVariants: {
-      color: 'white',
+      color: 'background',
       direction: 'down',
       position: 'bottom'
     }

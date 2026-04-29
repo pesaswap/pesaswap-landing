@@ -3,30 +3,19 @@
 import Badge from "@/components/badge"
 import Card from "@/components/card"
 import SlideEffect from "@/components/slide-effect"
-import Image from "next/image"
 
 const settings = {
   badge: {
     number: 3,
-    text: 'ADVANCED ANALYTICS',
+    text: 'THE ARCHITECTURE',
   },
-  title: 'Dive Into the Details',
-  description: 'See beyond clicks with the power of events, A/B testing, and tag-based segmentation, drill down into single sessions, or track your performance with flexible conversion goals.',
-  card_1: {
-    title: 'Analyze Funnels',
-    content: 'Effectively visualize and fully understand user journeys in a matter of seconds.',
-    image: 'https://framerusercontent.com/images/3FWbibttHBsnge8Td2JRVbNo.svg'
-  },
-  card_2: {
-    title: 'Explore Sessions',
-    content: 'Learn more about individual user journeys with in-depth session summaries.',
-    image: 'https://framerusercontent.com/images/eaFbEnL3er77EwtTIiUEMgYTLnQ.svg'
-  },
-  card_3: {
-    title: 'Segment Visitors',
-    content: 'Leverage your data with tags for A/B testing or segmentation and channel attribution.',
-    image: 'https://framerusercontent.com/images/82g4S0XdXlaUWPtoLMLmaJhP1yc.svg'
-  },
+  title: 'Pesaswap Sits in the Middle',
+  description: 'Platforms on top. Local rails below. We connect and optimise the flow between them.',
+  layers: {
+    platforms: ['Zotapay', 'LemFi', 'Nala', 'Seven By Far', 'International PSPs', 'Remittance Platforms'],
+    capabilities: ['Smart Routing & Failover', 'Real-Time FX Settlement', '3-Way Auto Reconciliation', 'Success Rate Optimisation', 'OPEN PSP API Layer'],
+    rails: ['M-Pesa', 'Airtel Money', 'MTN MoMo', 'KCB', 'Co-op Bank', 'Choice Bank'],
+  }
 }
 
 export default function Features3() {
@@ -39,41 +28,69 @@ export default function Features3() {
 
       {/* Title */}
       <SlideEffect>
-        <h2 className="text-2xl md:text-4xl lg:text-header capitalize text-transparent bg-clip-text bg-gradient-to-b from-black to-black/60 font-medium leading-normal">{settings.title}</h2>
+        <h2 className="text-2xl md:text-4xl lg:text-header font-semibold leading-[1.1] text-ink font-[family-name:var(--font-display)] tracking-tight">{settings.title}</h2>
       </SlideEffect>
 
       {/* Description */}
-      <SlideEffect className="px-2 sm:px-10 md:px-0 w-full md:max-w-3/4 mx-auto text-sm lg:text-base">{settings.description}</SlideEffect>
+      <SlideEffect className="px-2 sm:px-10 md:px-0 w-full md:max-w-3/4 mx-auto text-sm lg:text-base max-w-[65ch]">{settings.description}</SlideEffect>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* card 1 */}
-        <SlideEffect direction="top" className="col-span-1 h-full" isSpring={false}>
-          <Card>
-            <h3 className="text-xl md:text-title text-black font-medium">{settings.card_1.title}</h3>
-            <p className="mb-4">{settings.card_1.content}</p>
-            <Image src={settings.card_1.image} alt={settings.card_1.title} width={512} height={512} />
-          </Card>
-        </SlideEffect>
+      {/* Architecture diagram */}
+      <SlideEffect isSpring={false} duration={1}>
+        <div className="space-y-4">
+          {/* Layer 1: Merchant & Platform Layer */}
+          <div className="space-y-2">
+            <p className="text-xs uppercase tracking-[0.08em] text-foreground/50 font-medium">Layer 1: Merchant &amp; Platform Layer</p>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+              {settings.layers.platforms.map((name) => (
+                <div key={name} className="px-4 py-2.5 bg-secondary border border-border rounded-[10px] text-sm font-medium text-ink">
+                  {name}
+                </div>
+              ))}
+            </div>
+          </div>
 
-        {/* card 2 */}
-        <SlideEffect direction="top" delay={0.2} className="col-span-1 h-full" isSpring={false}>
-          <Card>
-            <h3 className="text-xl md:text-title text-black font-medium">{settings.card_2.title}</h3>
-            <p>{settings.card_2.content}</p>
-            <Image src={settings.card_2.image} alt={settings.card_1.title} width={512} height={512} />
-          </Card>
-        </SlideEffect>
+          {/* Arrow down */}
+          <div className="flex justify-center py-2">
+            <div className="w-px h-8 bg-border" />
+          </div>
 
-        {/* card 3 */}
-        <SlideEffect direction="top" delay={0.3} className="col-span-1 h-full" isSpring={false}>
-          <Card>
-            <h3 className="text-xl md:text-title text-black font-medium">{settings.card_3.title}</h3>
-            <p>{settings.card_3.content}</p>
-            <Image src={settings.card_3.image} alt={settings.card_1.title} width={512} height={512} />
+          {/* Layer 2: Pesaswap Orchestration */}
+          <Card variant="elevated" className="!text-center !items-center">
+            <p className="text-xs uppercase tracking-[0.08em] text-on-primary/60 font-medium">Pesaswap: Orchestration Infrastructure Layer</p>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3 mt-2">
+              {settings.layers.capabilities.map((cap) => (
+                <div key={cap} className="px-3 py-2 bg-on-primary/10 border border-on-primary/20 rounded-[8px] text-sm text-on-primary font-medium">
+                  {cap}
+                </div>
+              ))}
+            </div>
           </Card>
-        </SlideEffect>
-      </div>
+
+          {/* Arrow down */}
+          <div className="flex justify-center py-2">
+            <div className="w-px h-8 bg-border" />
+          </div>
+
+          {/* Layer 3: Local Payment Rails */}
+          <div className="space-y-2">
+            <p className="text-xs uppercase tracking-[0.08em] text-foreground/50 font-medium">Layer 3: Local Payment Rails</p>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+              {settings.layers.rails.map((name) => (
+                <div key={name} className="px-4 py-2.5 bg-secondary border border-border rounded-[10px] text-sm font-medium text-ink">
+                  {name}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </SlideEffect>
+
+      {/* Bottom statement */}
+      <SlideEffect>
+        <p className="text-sm text-foreground/70 italic max-w-[55ch] mx-auto">
+          Every platform above uses Pesaswap to reach every rail below: through one integration, one contract, one reconciliation file.
+        </p>
+      </SlideEffect>
     </div>
   )
 }

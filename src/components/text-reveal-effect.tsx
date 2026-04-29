@@ -11,7 +11,7 @@ export default function TextRevealEffect({ children, className }: { children: st
         key={i}
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: i * 0.015, ease: [1, 0, 0, 1], duration: 1 }}
+        transition={{ delay: i * 0.015, ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
         viewport={{ once: true }}
         className={className}
       >

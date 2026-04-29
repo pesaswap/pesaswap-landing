@@ -11,7 +11,7 @@ import Testimonials from "@/sections/testimonials";
 
 export default function HomePage() {
   return (
-    <div className="px-4 xl:px-0 max-w-5xl mx-auto space-y-20 sm:space-y-24 md:space-y-32 lg:space-y-40 scroll-smooth">
+    <main id="main-content" className="px-4 xl:px-0 max-w-5xl mx-auto space-y-20 sm:space-y-24 md:space-y-32 lg:space-y-40 scroll-smooth">
       <Hero />
       <Features1 />
       <Features2 />
@@ -22,6 +22,6 @@ export default function HomePage() {
       <FAQ />
       <CTA />
       <Footer />
-    </div>
+    </main>
   )
 }

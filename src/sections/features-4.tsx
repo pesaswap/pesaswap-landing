@@ -3,52 +3,40 @@
 import Badge from "@/components/badge"
 import Card from "@/components/card"
 import SlideEffect from "@/components/slide-effect"
-import Spinner from "@/components/spinner"
 import TextRevealEffect from "@/components/text-reveal-effect"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { Check, X } from "lucide-react"
 
 const settings = {
   badge: {
     number: 4,
-    text: 'SMART TEAMWORK',
+    text: 'WHY PESASWAP',
   },
-  title: 'Empower People With Data',
-  description: 'Reduce friction and enhance productivity by getting the right information to the right people with minimal effort, enabling them to thrive and excel.',
-  card_1: {
-    title: 'Easily Manage Teams and Sites',
-    content: "Work happens in teams. That's why Pirsch enables collaboration right from the start: Simply invite team members or clients via email, assign them roles, and give them access to the dashboards they need to excel. All people, sites and custom themes in one place.",
-    CTA: {
-      content: 'Start 30-day Free Trial',
-      href: '#'
+  title: 'Others Lock Merchants In. We Unlock the Network.',
+  description: 'The market is full of closed PSP ecosystems. Pesaswap is the only open orchestration layer.',
+  comparison: {
+    closed: {
+      label: 'Closed PSP Ecosystem',
+      names: 'Flutterwave, Paystack, Cellulant, PesaPal',
+      points: [
+        'Merchant locked into ONE provider',
+        'Single point of failure, no failover',
+        'Country-by-country integration required',
+        'Opaque FX rates, manual reconciliation',
+        'Concentration risk: if provider fails, you fail',
+      ]
     },
-    labels: [
-      'my-site.com',
-      'example.com',
-      'my-saas.ai',
-      'my-blog.com',
-      'potfolio.me',
-      'new-site.com',
-      'client-site.io',
-    ],
-    avatars: [
-      'https://avatar.iran.liara.run/public/38',
-      'https://avatar.iran.liara.run/public/40',
-      'https://avatar.iran.liara.run/public/22',
-      'https://avatar.iran.liara.run/public/6',
-      'https://avatar.iran.liara.run/public/12',
-      'https://avatar.iran.liara.run/public/37',
-      'https://avatar.iran.liara.run/public/35'
-    ]
-  },
-  card_2: {
-    title: 'Receive Automatic Email Reports',
-    content: 'Keep colleagues, customers, or partners in the loop with automatic email reports. Regularly receive a concise summary of the latest activities with just one click.',
-  },
-  card_3: {
-    title: 'Share Dashboards With Anybody',
-    content: 'Working with external partners? Create unique access links to securely grant access to dashboards or make them public on your personal subdomain.',
-  },
+    open: {
+      label: 'Open Orchestration Layer',
+      names: 'Pesaswap',
+      points: [
+        'Merchant chooses any provider, we route optimally',
+        'Automated failover across 15+ direct integrations',
+        'One API, every corridor across 4 markets',
+        'Real-time FX settlement with automated reconciliation',
+        'No concentration risk: multi-rail by design',
+      ]
+    }
+  }
 }
 
 export default function Features4() {
@@ -60,44 +48,56 @@ export default function Features4() {
       </SlideEffect>
 
       {/* Title */}
-      <TextRevealEffect className="text-2xl md:text-4xl lg:text-header text-transparent bg-clip-text bg-gradient-to-b from-black to-black/60 font-medium leading-normal">{settings.title}</TextRevealEffect>
+      <TextRevealEffect className="text-2xl md:text-4xl lg:text-header text-ink font-semibold leading-[1.1] font-[family-name:var(--font-display)] tracking-tight">{settings.title}</TextRevealEffect>
 
       {/* Description */}
-      <SlideEffect className="px-2 sm:px-10 md:px-0 w-full md:max-w-3/4 mx-auto text-sm lg:text-base">{settings.description}</SlideEffect>
+      <SlideEffect className="px-2 sm:px-10 md:px-0 w-full md:max-w-3/4 mx-auto text-sm lg:text-base max-w-[65ch]">{settings.description}</SlideEffect>
 
-      {/* Cards */}
+      {/* Comparison */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* card 1 */}
-        <SlideEffect direction="top" className="grid-cols-1 lg:col-span-2 h-full" isSpring={false}>
-          <Card className="flex flex-col lg:flex-row justify-center items-center">
-            <div className="space-y-3 md:space-y-5 flex-1">
-              <h3 className="text-xl md:text-title text-black font-medium">{settings.card_1.title}</h3>
-              <p className="mb-8 lg:mb-16">{settings.card_1.content}</p>
-              <Link href={settings.card_1.CTA.href}>
-                <Button className="bg-accent">{settings.card_1.CTA.content}</Button>
-              </Link>
-            </div>
-
-            <Spinner labels={settings.card_1.labels} avatars={settings.card_1.avatars} />
+        {/* Closed PSP */}
+        <SlideEffect direction="right" className="h-full" isSpring={false}>
+          <Card>
+            <p className="text-xs uppercase tracking-[0.08em] text-foreground/50 font-medium">{settings.comparison.closed.label}</p>
+            <p className="text-sm text-foreground/60 -mt-2">{settings.comparison.closed.names}</p>
+            <ul className="text-sm text-start space-y-3 mt-2 w-full">
+              {settings.comparison.closed.points.map((point, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="shrink-0 mt-0.5 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
+                    <X size={12} className="text-red-600" />
+                  </span>
+                  <span className="text-foreground">{point}</span>
+                </li>
+              ))}
+            </ul>
           </Card>
         </SlideEffect>
 
-        {/* card 2 */}
-        <SlideEffect direction="right" className="col-span-1 h-full" isSpring={false}>
-          <Card>
-            <h3 className="text-xl md:text-title text-black font-medium">{settings.card_2.title}</h3>
-            <p>{settings.card_2.content}</p>
-          </Card>
-        </SlideEffect>
-
-        {/* card 3 */}
-        <SlideEffect direction="left" delay={0.2} className="col-span-1 h-full" isSpring={false}>
-          <Card>
-            <h3 className="text-xl md:text-title text-black font-medium">{settings.card_3.title}</h3>
-            <p>{settings.card_3.content}</p>
+        {/* Open Orchestration */}
+        <SlideEffect direction="left" className="h-full" isSpring={false}>
+          <Card variant="elevated">
+            <p className="text-xs uppercase tracking-[0.08em] text-on-primary/60 font-medium">{settings.comparison.open.label}</p>
+            <p className="text-sm text-accent -mt-2">{settings.comparison.open.names}</p>
+            <ul className="text-sm text-start space-y-3 mt-2 w-full">
+              {settings.comparison.open.points.map((point, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="shrink-0 mt-0.5 w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center">
+                    <Check size={12} className="text-accent" />
+                  </span>
+                  <span className="text-on-primary/90">{point}</span>
+                </li>
+              ))}
+            </ul>
           </Card>
         </SlideEffect>
       </div>
+
+      {/* Bottom quote */}
+      <SlideEffect>
+        <p className="text-sm text-foreground/70 italic max-w-[55ch] mx-auto">
+          {'"We are not competing with PSPs; we are the infrastructure that connects and optimises them."'}
+        </p>
+      </SlideEffect>
     </div>
   )
 }

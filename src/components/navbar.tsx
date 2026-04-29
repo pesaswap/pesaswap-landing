@@ -10,15 +10,15 @@ import { useState } from "react"
 
 const settings = {
   navLinks: [
-    { name: 'home', href: '/' },
-    { name: 'features', href: '#features' },
-    { name: 'pricing', href: '#pricing' },
-    { name: 'testimonials', href: '#testimonials' },
+    { name: 'Home', href: '/' },
+    { name: 'Features', href: '#features' },
+    { name: 'Network', href: '#network' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'FAQ', href: '#faq' },
   ],
   cta: {
-    content: 'try it for free',
-    href: '/'
+    content: 'Get started',
+    href: '#'
   }
 }
 
@@ -30,43 +30,44 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="w-full h-fit py-4 flex items-center justify-between">
+    <nav className="w-full h-fit py-4 flex items-center justify-between" role="navigation" aria-label="Main navigation">
       {/* Logo */}
-      <Link href='/' title="Home" id="Logo">
+      <Link href='/' title="Pesaswap Home" id="Logo">
         <Logo />
       </Link>
 
       {/* desktop menu */}
-      <div className="items-center justify-center gap-5 hidden md:flex">
-
+      <div className="items-center justify-center gap-6 hidden md:flex">
         {/* Nav Links */}
-        <ul className="flex items-center justify-center gap-5 text-black font-medium select-none text-link">
+        <ul className="flex items-center justify-center gap-6 text-ink font-medium select-none text-[15px]">
           {settings.navLinks.map(link => (
             <li key={link.name}>
-              <Link href={link.href} title={link.name} className="hover:opacity-80 transition-all capitalize">{link.name}</Link>
+              <Link href={link.href} title={link.name} className="hover:opacity-70 transition-opacity duration-200">{link.name}</Link>
             </li>
           ))}
         </ul>
 
         {/* Call To Action */}
         <Link href={settings.cta.href} title={settings.cta.content}>
-          <Button className="capitalize">{settings.cta.content}</Button>
+          <Button>{settings.cta.content}</Button>
         </Link>
       </div>
 
       {/* mobile only - burger menu icon */}
-      <motion.div
+      <motion.button
         initial={{ scale: 1, y: 0 }}
         whileTap={{ scale: 0.8 }}
         transition={{ duration: 0.3 }}
-        className="bg-white shadow-none flex md:hidden cursor-pointer text-black"
+        className="bg-transparent shadow-none flex md:hidden cursor-pointer text-ink"
         onClick={toggleMenu}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isOpen}
       >
-        {!isOpen && <AlignJustify size={20} />}
-        {isOpen && <X size={20} />}
-      </motion.div>
+        {!isOpen && <AlignJustify size={22} />}
+        {isOpen && <X size={22} />}
+      </motion.button>
 
-      {/* mobile only - menu container with AnimatePresence for exit animations */}
+      {/* mobile only - menu container */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -74,19 +75,19 @@ export default function Navbar() {
             animate={{ height: '100vh', opacity: 1, y: 0 }}
             exit={{ height: 0, opacity: 1, y: -20 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed flex flex-col md:hidden top-16 left-0 w-full bg-white z-50 overflow-hidden"
+            className="fixed flex flex-col md:hidden top-16 left-0 w-full bg-primary z-50 overflow-hidden"
           >
             <div className="flex flex-col p-6 space-y-6">
-              <ul className="flex flex-col space-y-2 text-black font-medium select-none text-base">
+              <ul className="flex flex-col space-y-2 text-on-primary font-medium select-none text-base">
                 {settings.navLinks.map(link => (
                   <li key={link.name}>
-                    <Link href={link.href} title={link.name} onClick={toggleMenu} className="block py-2 capitalize">{link.name}</Link>
+                    <Link href={link.href} title={link.name} onClick={toggleMenu} className="block py-2">{link.name}</Link>
                   </li>
                 ))}
               </ul>
 
               <Link href={settings.cta.href} title={settings.cta.content} onClick={toggleMenu}>
-                <Button className="w-full capitalize">{settings.cta.content}</Button>
+                <Button variant="accent" className="w-full">{settings.cta.content}</Button>
               </Link>
             </div>
           </motion.div>

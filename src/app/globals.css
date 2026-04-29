@@ -2,24 +2,35 @@
 @import "tw-animate-css";
 
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #707070;
-  --color-primary: #6ECE9D;
+  --color-background: #FAFBFA;
+  --color-foreground: #4A5754;
+  --color-primary: #1B5E4B;
+  --color-primary-deep: #143D32;
   --color-secondary: #F8F5ED;
-  --color-accent: #FFDA6E;
-  --color-muted: #F0F0F0;
-  --color-border: rgba(0, 0, 0, 0.1);
+  --color-accent: #C9A84E;
+  --color-accent-muted: #D4B96A;
+  --color-muted: #F8F5ED;
+  --color-border: #E2DFD6;
+  --color-border-dark: #2A7A62;
+  --color-ink: #1A1F1E;
+  --color-on-primary: #FAFBFA;
+  --color-success: #2D8F6F;
 
-  --text-base: 18px;
-  --text-link: 16px;
-  --text-header: 64px;
-  --text-title: 28px;
-  --text-hero: 96px;
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Figtree", sans-serif;
+
+  --text-base: 17px;
+  --text-link: 15px;
+  --text-header: clamp(1.75rem, 4vw, 3.5rem);
+  --text-title: clamp(1.25rem, 2vw, 1.75rem);
+  --text-hero: clamp(2.5rem, 6vw, 5rem);
+  --text-label: 0.8125rem;
 }
 
 :root {
   color: var(--color-foreground);
   background: var(--color-background);
+  font-family: var(--font-body);
   font-size: var(--text-base);
   overflow-x: hidden;
   overflow-y: auto;
@@ -29,3 +40,15 @@ html {
   scroll-behavior: smooth;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
