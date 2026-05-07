@@ -1,19 +1,6 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Figtree } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/providers/lenis";
-
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["600", "700"],
-});
-
-const figtree = Figtree({
-  variable: "--font-body",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
 
 export const metadata: Metadata = {
   title: "Pesaswap — Payment Orchestration Infrastructure for East Africa",
@@ -27,8 +14,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${bricolage.variable} ${figtree.variable} antialiased w-full min-h-screen overflow-x-hidden`}
+        className="antialiased w-full min-h-screen overflow-x-hidden"
       >
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2 focus:rounded-[10px] focus:text-sm focus:font-medium">
           Skip to main content

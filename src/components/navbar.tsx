@@ -33,13 +33,13 @@ export default function Navbar() {
     <nav className="w-full h-fit py-4 flex items-center justify-between" role="navigation" aria-label="Main navigation">
       {/* Logo */}
       <Link href='/' title="Pesaswap Home" id="Logo">
-        <Logo />
+        <Logo light />
       </Link>
 
       {/* desktop menu */}
       <div className="items-center justify-center gap-6 hidden md:flex">
         {/* Nav Links */}
-        <ul className="flex items-center justify-center gap-6 text-ink font-medium select-none text-[15px]">
+        <ul className="flex items-center justify-center gap-6 text-on-primary font-medium select-none text-[15px]">
           {settings.navLinks.map(link => (
             <li key={link.name}>
               <Link href={link.href} title={link.name} className="hover:opacity-70 transition-opacity duration-200">{link.name}</Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
 
         {/* Call To Action */}
         <Link href={settings.cta.href} title={settings.cta.content}>
-          <Button>{settings.cta.content}</Button>
+          <Button variant="accent">{settings.cta.content}</Button>
         </Link>
       </div>
 
@@ -58,7 +58,7 @@ export default function Navbar() {
         initial={{ scale: 1, y: 0 }}
         whileTap={{ scale: 0.8 }}
         transition={{ duration: 0.3 }}
-        className="bg-transparent shadow-none flex md:hidden cursor-pointer text-ink"
+        className="bg-transparent shadow-none flex md:hidden cursor-pointer text-on-primary"
         onClick={toggleMenu}
         aria-label={isOpen ? "Close menu" : "Open menu"}
         aria-expanded={isOpen}

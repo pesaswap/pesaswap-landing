@@ -2,6 +2,7 @@
 
 import Badge from "@/components/badge"
 import Card from "@/components/card"
+import Counter from "@/components/counter"
 import SlideEffect from "@/components/slide-effect"
 import TextRevealEffect from "@/components/text-reveal-effect"
 
@@ -14,17 +15,23 @@ const settings = {
   description: 'We scale through platforms. One Tier-1 integration is worth thousands of individual merchant relationships.',
   stats: [
     {
-      value: 'USD 120Mn+',
+      value: 120,
+      prefix: 'USD ',
+      suffix: 'Mn+',
       label: 'Network Orchestration Volume',
       detail: 'Processed through Tier-1 partner rails: Zotapay, LemFi, Nala',
     },
     {
-      value: 'USD 1Bn/mo',
+      value: 1,
+      prefix: 'USD ',
+      suffix: 'Bn/mo',
       label: 'Tier-1 Partner Network Reach',
       detail: 'LemFi alone processes USD 1Bn/month. Pesaswap is their East African infrastructure.',
     },
     {
-      value: '4 Markets',
+      value: 4,
+      prefix: '',
+      suffix: ' Markets',
       label: 'Live & Licensed Infrastructure',
       detail: 'Tanzania (BoT), Uganda (BoU), Kenya (CBK pending), Rwanda (NBR pending)',
     },
@@ -68,7 +75,7 @@ export default function Testimonials() {
           {settings.stats.map((stat, index) => (
             <Card key={stat.label} variant={index === 1 ? 'elevated' : 'default'} className="!text-center !items-center">
               <p className={`text-3xl md:text-4xl font-bold font-[family-name:var(--font-display)] ${index === 1 ? 'text-accent' : 'text-primary'}`}>
-                {stat.value}
+                <Counter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
               </p>
               <p className={`font-semibold text-sm ${index === 1 ? 'text-on-primary' : 'text-ink'}`}>{stat.label}</p>
               <p className={`text-xs ${index === 1 ? 'text-on-primary/60' : 'text-foreground/60'}`}>{stat.detail}</p>
@@ -81,7 +88,7 @@ export default function Testimonials() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4">
         {settings.partners.map((partner, index) => (
           <SlideEffect key={partner.name} direction="top" delay={index * 0.15} className="h-full" isSpring={false}>
-            <Card>
+            <Card className="hover:shadow-[0_2px_12px_rgba(26,31,30,0.06)] transition-shadow duration-300">
               <div className="flex items-center gap-2">
                 <span className="font-semibold font-[family-name:var(--font-display)] text-ink text-lg">{partner.name}</span>
                 <span className="text-xs text-foreground/50 bg-secondary border border-border px-2 py-0.5 rounded-full">{partner.role}</span>

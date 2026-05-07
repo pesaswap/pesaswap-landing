@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const settings = {
   headline: 'The Rail Powering Cross-Border Commerce into Africa.',
-  subheadline: 'Payment orchestration infrastructure for East Africa. Smart routing, real-time FX settlement, and 3-way automated reconciliation across 15+ direct integrations. One API, four markets, zero lock-in.',
+  subheadline: 'Payment orchestration infrastructure for East Africa. Smart routing, real-time FX settlement, and 3-way automated reconciliation across 15+ direct integrations.',
   mainCTA: {
     content: 'Talk to our team',
     href: '#'
@@ -22,69 +22,73 @@ const settings = {
     { value: 'USD 120Mn+', label: 'Processed' },
     { value: '4 Markets', label: 'Licensed' },
     { value: '15+', label: 'Direct Integrations' },
-  ]
+  ],
+  partners: ['Zotapay', 'LemFi', 'Nala', 'Seven By Far', 'Co-op Bank'],
 }
 
 export default function Hero() {
   return (
-    <div className="space-y-12 md:space-y-16 lg:space-y-20 z-50 relative">
-      <Navbar />
+    <div className="relative">
+      {/* Teal hero background - breaks out of container */}
+      <div className="absolute inset-0 -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] bg-primary -top-4 rounded-b-[32px] md:rounded-b-[48px]" style={{ bottom: '-3rem' }} />
 
-      <section className="flex flex-col gap-8 lg:gap-10 items-center text-center">
-        {/* Headline */}
-        <h1 className="text-ink text-4xl md:text-6xl lg:text-hero font-bold tracking-tight leading-[1.05] xl:max-w-4/5 font-[family-name:var(--font-display)]">
-          <TextBlurEffect className='text-ink'>{settings.headline}</TextBlurEffect>
-        </h1>
+      <div className="relative z-10 space-y-12 md:space-y-16 lg:space-y-20">
+        <Navbar />
 
-        {/* Sub-headline */}
-        <SlideEffect
-          delay={0}
-          className="text-sm lg:text-base px-6 sm:px-10 md:px-0 md:max-w-3/4 mx-auto max-w-[65ch]"
-        >
-          {settings.subheadline}
-        </SlideEffect>
+        <section className="flex flex-col gap-8 lg:gap-10 items-center text-center pb-8 md:pb-12">
+          {/* Headline */}
+          <h1 className="text-on-primary text-4xl md:text-6xl lg:text-hero font-bold tracking-tight leading-[1.05] xl:max-w-4/5 font-[family-name:var(--font-display)]">
+            <TextBlurEffect className='text-on-primary'>{settings.headline}</TextBlurEffect>
+          </h1>
 
-        {/* CTA */}
-        <SlideEffect
-          className="flex flex-col gap-8 md:gap-5 items-center justify-center w-full md:w-fit"
-        >
-          {/* Buttons */}
-          <div className="flex flex-col md:flex-row items-center w-full justify-center gap-3 md:gap-4 mt-1">
-            <Link href={settings.mainCTA.href} className="w-full md:w-auto">
-              <Button size='lg' className="w-full md:w-auto">
-                {settings.mainCTA.content}
-                <ArrowRight />
-              </Button>
-            </Link>
+          {/* Sub-headline */}
+          <SlideEffect
+            delay={0}
+            className="text-sm lg:text-base px-6 sm:px-10 md:px-0 md:max-w-3/4 mx-auto max-w-[65ch] text-on-primary/70 leading-relaxed"
+          >
+            {settings.subheadline}
+          </SlideEffect>
 
-            <Link href={settings.secondaryCTA.href} className="w-full md:w-auto">
-              <Button size='lg' className="w-full md:w-auto" variant='secondary'>
-                {settings.secondaryCTA.content}
-              </Button>
-            </Link>
-          </div>
+          {/* CTA */}
+          <SlideEffect className="flex flex-col gap-6 md:gap-5 items-center justify-center w-full md:w-fit">
+            {/* Buttons */}
+            <div className="flex flex-col md:flex-row items-center w-full justify-center gap-3 md:gap-4">
+              <Link href={settings.mainCTA.href} className="w-full md:w-auto">
+                <Button size='lg' variant="accent" className="w-full md:w-auto">
+                  {settings.mainCTA.content}
+                  <ArrowRight />
+                </Button>
+              </Link>
 
-          {/* Proof Points */}
-          <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
-            {settings.proofPoints.map((point, index) => (
-              <div key={index} className="flex items-center gap-2 px-4 py-2 bg-secondary border border-border rounded-full">
-                <span className="font-[family-name:var(--font-display)] font-bold text-sm md:text-base text-ink">{point.value}</span>
-                <span className="text-xs md:text-sm text-foreground">{point.label}</span>
-              </div>
-            ))}
-          </div>
-        </SlideEffect>
+              <Link href={settings.secondaryCTA.href} className="w-full md:w-auto">
+                <Button size='lg' className="w-full md:w-auto bg-on-primary/10 text-on-primary border-on-primary/20 hover:bg-on-primary/20">
+                  {settings.secondaryCTA.content}
+                </Button>
+              </Link>
+            </div>
 
-        {/* Partner logos */}
-        <SlideEffect className="w-full pt-8 md:pt-12" isSpring={false} duration={1.3}>
-          <p className="text-xs uppercase tracking-[0.08em] text-foreground/60 mb-6 font-medium">Trusted by leading platforms</p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60">
-            {['Zotapay', 'LemFi', 'Nala', 'Seven By Far', 'Co-op Bank'].map((name) => (
-              <span key={name} className="text-ink font-[family-name:var(--font-display)] font-semibold text-lg md:text-xl">{name}</span>
-            ))}
-          </div>
-        </SlideEffect>
-      </section>
+            {/* Proof Points */}
+            <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
+              {settings.proofPoints.map((point, index) => (
+                <div key={index} className="flex items-center gap-2 px-4 py-2 bg-on-primary/10 border border-on-primary/15 rounded-full">
+                  <span className="font-[family-name:var(--font-display)] font-bold text-sm md:text-base text-accent">{point.value}</span>
+                  <span className="text-xs md:text-sm text-on-primary/60">{point.label}</span>
+                </div>
+              ))}
+            </div>
+          </SlideEffect>
+
+          {/* Partner logos */}
+          <SlideEffect className="w-full pt-4 md:pt-8" isSpring={false} duration={1.3}>
+            <p className="text-xs uppercase tracking-[0.08em] text-on-primary/40 mb-5 font-medium">Trusted by leading platforms</p>
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+              {settings.partners.map((name) => (
+                <span key={name} className="text-on-primary/50 font-[family-name:var(--font-display)] font-semibold text-base md:text-lg hover:text-on-primary/80 transition-opacity duration-200">{name}</span>
+              ))}
+            </div>
+          </SlideEffect>
+        </section>
+      </div>
     </div>
   )
 }
