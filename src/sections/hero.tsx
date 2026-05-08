@@ -12,18 +12,17 @@ const settings = {
   subheadline: 'Payment orchestration infrastructure for East Africa. Smart routing, real-time FX settlement, and 3-way automated reconciliation across 15+ direct integrations.',
   mainCTA: {
     content: 'Talk to our team',
-    href: '#'
+    href: '#contact'
   },
   secondaryCTA: {
     content: 'View documentation',
-    href: '#'
+    href: 'https://docs.pesaswap.io/introduction'
   },
   proofPoints: [
     { value: 'USD 120Mn+', label: 'Processed' },
     { value: '4 Markets', label: 'Licensed' },
     { value: '15+', label: 'Direct Integrations' },
   ],
-  partners: ['Zotapay', 'LemFi', 'Nala', 'Seven By Far', 'Co-op Bank'],
 }
 
 export default function Hero() {
@@ -53,12 +52,21 @@ export default function Hero() {
           <SlideEffect className="flex flex-col gap-6 md:gap-5 items-center justify-center w-full md:w-fit">
             {/* Buttons */}
             <div className="flex flex-col md:flex-row items-center w-full justify-center gap-3 md:gap-4">
-              <Link href={settings.mainCTA.href} className="w-full md:w-auto">
+              <a
+                href={settings.mainCTA.href}
+                className="w-full md:w-auto"
+                onClick={(e) => {
+                  if (settings.mainCTA.href.startsWith('#')) {
+                    e.preventDefault()
+                    document.querySelector(settings.mainCTA.href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                }}
+              >
                 <Button size='lg' variant="accent" className="w-full md:w-auto">
                   {settings.mainCTA.content}
                   <ArrowRight />
                 </Button>
-              </Link>
+              </a>
 
               <Link href={settings.secondaryCTA.href} className="w-full md:w-auto">
                 <Button size='lg' className="w-full md:w-auto bg-on-primary/10 text-on-primary border-on-primary/20 hover:bg-on-primary/20">
@@ -78,15 +86,6 @@ export default function Hero() {
             </div>
           </SlideEffect>
 
-          {/* Partner logos */}
-          <SlideEffect className="w-full pt-4 md:pt-8" isSpring={false} duration={1.3}>
-            <p className="text-xs uppercase tracking-[0.08em] text-on-primary/40 mb-5 font-medium">Trusted by leading platforms</p>
-            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-              {settings.partners.map((name) => (
-                <span key={name} className="text-on-primary/50 font-[family-name:var(--font-display)] font-semibold text-base md:text-lg hover:text-on-primary/80 transition-opacity duration-200">{name}</span>
-              ))}
-            </div>
-          </SlideEffect>
         </section>
       </div>
     </div>

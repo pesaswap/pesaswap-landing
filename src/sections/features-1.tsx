@@ -10,8 +10,8 @@ const settings = {
     number: 1,
     text: 'THE INFRASTRUCTURE',
   },
-  title: 'Not a PSP. The Layer Beneath.',
-  description: 'Pesaswap sits between platforms and local payment rails, providing smart routing, real-time FX settlement, and automated reconciliation through one API.',
+  title: 'Beyond Payment Processing.',
+  description: 'Pesaswap enables platforms to operate across local payment networks with optimized routing, instant FX settlement, and centralized reconciliation — all through a single API integration.',
 }
 
 export default function Features1() {
