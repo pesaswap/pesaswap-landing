@@ -6,7 +6,6 @@ import Link from "next/link"
 const settings = {
   links: [
     { title: 'Features', href: '#features' },
-    { title: 'Network', href: '#network' },
     { title: 'Revenue Model', href: '#pricing' },
     { title: 'FAQ', href: '#faq' },
     { title: 'Contact', href: 'mailto:info@pesaswap.com' },

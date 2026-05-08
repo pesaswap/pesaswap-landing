@@ -4,7 +4,7 @@ import SlideEffect from "@/components/slide-effect"
 
 const settings = {
   badge: {
-    number: 3,
+    number: 2,
     text: 'THE ARCHITECTURE',
   },
   title: 'Pesaswap Sits in the Middle',

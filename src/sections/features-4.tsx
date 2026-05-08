@@ -8,7 +8,7 @@ import { Check, X } from "lucide-react"
 
 const settings = {
   badge: {
-    number: 4,
+    number: 3,
     text: 'WHY PESASWAP',
   },
   title: 'Others Lock Merchants In. We Unlock the Network.',

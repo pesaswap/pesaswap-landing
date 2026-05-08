@@ -8,7 +8,7 @@ import TextRevealEffect from "@/components/text-reveal-effect"
 
 const settings = {
   badge: {
-    number: 5,
+    number: 4,
     text: 'TRACTION',
   },
   title: 'Network Orchestration Volume, Not Merchant Count',
