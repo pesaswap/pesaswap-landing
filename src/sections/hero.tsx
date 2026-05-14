@@ -1,5 +1,6 @@
 'use client'
 
+import HeroBackground from "@/components/hero-background";
 import Navbar from "@/components/navbar";
 import SlideEffect from "@/components/slide-effect";
 import TextBlurEffect from "@/components/text-blur-effect";
@@ -28,8 +29,13 @@ const settings = {
 export default function Hero() {
   return (
     <div className="relative">
-      {/* Teal hero background - breaks out of container */}
-      <div className="absolute inset-0 -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] bg-primary -top-4 rounded-b-[32px] md:rounded-b-[48px]" style={{ bottom: '-3rem' }} />
+      {/* WebGL hero background - breaks out of container */}
+      <div
+        className="absolute inset-0 -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] -top-4 bg-primary-deep"
+        style={{ bottom: '-3rem' }}
+      >
+        <HeroBackground />
+      </div>
 
       <div className="relative z-10 space-y-12 md:space-y-16 lg:space-y-20">
         <Navbar />
