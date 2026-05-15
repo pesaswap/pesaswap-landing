@@ -10,8 +10,7 @@ const settings = {
   },
   title: (
     <>
-      How Pesaswap connects <span className="text-primary">merchants</span> to{' '}
-      <span className="text-accent">Africa&apos;s payment ecosystem.</span>
+      Pesaswap sits in the <span className="text-accent">middle</span>.
     </>
   ),
   description:

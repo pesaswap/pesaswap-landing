@@ -17,15 +17,15 @@ const settings = {
     },
     {
       question: 'What markets does Pesaswap operate in?',
-      answer: 'We are licensed and operational in Tanzania (Bank of Tanzania) and Uganda (Bank of Uganda), with Kenya (Central Bank of Kenya) and Rwanda (National Bank of Rwanda) in advanced stages. The Kenya-Rwanda PSP Licence Passporting Framework, live since March 2026, allows one licence to cover two high-growth markets.',
+      answer: 'We are licensed and operational in Tanzania (Bank of Tanzania) and Uganda (Bank of Uganda), with Kenya (Central Bank of Kenya) and Rwanda (National Bank of Rwanda) in advanced stages. The Kenya-Rwanda PSP Licence Passporting Framework, live since March 2026, allows one licence to cover two high-growth markets. West Africa expansion is on our roadmap as we scale the orchestration layer across the continent.',
     },
     {
       question: 'What payment rails are supported?',
-      answer: 'We have direct switch-level integrations with M-Pesa (Kenya), Airtel Money (Kenya/Uganda/Rwanda), MTN MoMo (Uganda/Rwanda), KCB, Co-op Bank, Choice Bank, and i&M Bank. These are direct integrations, not API wrappers. The depth of these integrations across 15+ rails and 4 markets represents years of compliance and engineering work.',
+      answer: 'We have direct switch-level integrations with M-Pesa (Kenya), Airtel Money (Kenya/Uganda/Rwanda), MTN MoMo (Uganda/Rwanda), KCB, Co-op Bank, Choice Bank, and i&M Bank. These are direct integrations, not API wrappers. The depth of these integrations across 15 rails and 4 markets represents years of compliance and engineering work.',
     },
     {
       question: 'How does the B2B2X model work?',
-      answer: 'One integration with a Tier-1 aggregator is worth thousands of individual merchant relationships. When Zotapay signs with Pesaswap, their entire portfolio of international merchants instantly routes through our rails. When Co-op Bank distributes Pesaswap-powered QR, we get instant local merchant coverage at zero acquisition cost. We scale through platforms, not individual merchants.',
+      answer: 'One integration with a Tier-1 aggregator is worth thousands of individual merchant relationships. When a global PSP signs with Pesaswap, their entire portfolio of international merchants instantly routes through our rails. When Co-op Bank distributes Pesaswap-powered QR, we get instant local merchant coverage at zero acquisition cost. We scale through platforms, not individual merchants.',
     },
     {
       question: 'What is the integration process?',
