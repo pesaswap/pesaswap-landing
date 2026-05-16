@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const settings = {
   headline: 'The Rail Powering Cross-Border Commerce into Africa.',
-  subheadline: 'Payment orchestration infrastructure for East Africa. Smart routing, real-time FX settlement, and 3-way automated reconciliation across 15+ direct integrations.',
+  subheadline: 'B2B2X payment orchestration for Africa. Smart routing, instant auto-failover, and real-time FX settlement — connecting every platform to every African payment rail through a single API.',
   mainCTA: {
     content: 'Talk to our team',
     href: '#contact'
@@ -19,17 +19,21 @@ const settings = {
     href: 'https://docs.pesaswap.io/introduction'
   },
   proofPoints: [
-    { value: 'USD 120Mn+', label: 'Processed' },
-    { value: '4 Markets', label: 'Licensed' },
-    { value: '15+', label: 'Direct Integrations' },
+    { value: 'USD 120Mn+', label: 'Processed Volume' },
+    { value: '3', label: 'Active Countries' },
+    { value: '15', label: 'Direct Integrations' },
+    { value: 'USD 1Bn/mo', label: 'Partner Network Reach' },
   ],
 }
 
 export default function Hero() {
   return (
     <div className="relative">
-      {/* Teal hero background - breaks out of container */}
-      <div className="absolute inset-0 -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] bg-primary -top-4 rounded-b-[32px] md:rounded-b-[48px]" style={{ bottom: '-3rem' }} />
+      {/* Solid hero background - breaks out of container */}
+      <div
+        className="absolute inset-0 -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] -top-4 bg-primary"
+        style={{ bottom: '-3rem' }}
+      />
 
       <div className="relative z-10 space-y-12 md:space-y-16 lg:space-y-20">
         <Navbar />

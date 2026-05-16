@@ -30,7 +30,7 @@ const settings = {
       names: 'Pesaswap',
       points: [
         'Merchant chooses any provider, we route optimally',
-        'Automated failover across 15+ direct integrations',
+        'Automated failover across 15 direct integrations',
         'One API, every corridor across 4 markets',
         'Real-time FX settlement with automated reconciliation',
         'No concentration risk: multi-rail by design',

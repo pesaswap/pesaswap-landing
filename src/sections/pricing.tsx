@@ -7,7 +7,7 @@ import { CircleCheck } from "lucide-react"
 
 const settings = {
   title: 'Revenue Model',
-  description: 'Gross margin positive on every transaction from day one. Three revenue streams that compound with volume. No consumer acquisition cost.',
+  description: 'Gross-margin positive from day one. Four compounding revenue rails that scale with volume. No consumer acquisition cost.',
   streams: [
     {
       name: 'Transaction Fees',
@@ -15,21 +15,21 @@ const settings = {
       tag: 'Primary volume driver',
       description: 'Percentage fee on every inbound payment processed: e-commerce, QR, remittance receipts.',
       details: [
-        'Network/interchange cost: ~0.5%',
-        'Net margin retained: 0.2-1.0%',
-        'Primary driver: Kenya collections volume',
+        'Transaction pricing shared on a call',
         'Scales linearly with merchant throughput',
+        'Primary driver: Kenya collections volume',
+        'Whitelabel-ready merchant checkout',
       ]
     },
     {
-      name: 'FX Spreads',
+      name: 'FX & Treasury',
       subtitle: 'Cross-Border Settlement',
-      tag: 'Most profitable rail',
-      description: 'Spread earned on every FX settlement. UK/US/EU to KE/TZ/UG/RW. Lower network cost than card.',
+      tag: 'Highest-margin rail',
+      description: 'Seamless cross-border settlement and treasury services from UK/US/EU into East Africa.',
       details: [
-        'Revenue: FX spread per settlement',
-        'Lower network cost than card processing',
-        'Best margin at current scale',
+        'Revenue from FX spread per settlement',
+        'Highest-margin rail at current scale',
+        'Treasury services for partner platforms',
         'Corridor: EU/UK/US to KE/TZ/UG/RW',
       ]
     },
@@ -37,12 +37,24 @@ const settings = {
       name: 'Wallet-to-Wallet',
       subtitle: 'P2P & Diaspora',
       tag: 'Fastest-growing rail',
-      description: 'Fee on wallet top-ups, P2P transfers, and domestic mobile flows. Low friction, low cost.',
+      description: 'Fee on wallet top-ups, P2P transfers, and diaspora corridors. Low friction, high frequency.',
       details: [
         'Fee per wallet transaction',
         'Lowest network cost structure',
         'Diaspora corridor primary use case',
         'Multiplier via aggregator partnerships',
+      ]
+    },
+    {
+      name: 'Invoice & QR',
+      subtitle: 'Corporate Collections',
+      tag: 'Bank-distributed rail',
+      description: 'Corporate invoice management and QR-driven collection, distributed through bank partnerships.',
+      details: [
+        'Fee on invoice settlement and QR collections',
+        'Distributed via bank partner networks',
+        'Corporate and SME billing use case',
+        'Instant local merchant coverage',
       ]
     },
   ]
@@ -60,7 +72,7 @@ export default function Pricing() {
       <SlideEffect className="px-2 sm:px-10 md:px-0 w-full md:max-w-3/4 mx-auto text-sm lg:text-base max-w-[65ch]">{settings.description}</SlideEffect>
 
       {/* Revenue Streams */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {settings.streams.map((stream, index) => (
           <SlideEffect key={stream.name} isSpring={false} delay={index * 0.1} className="text-base h-full">
             <Card variant={index === 1 ? 'elevated' : 'default'} className="h-full">
@@ -93,7 +105,7 @@ export default function Pricing() {
       <SlideEffect>
         <div className="flex flex-col items-center gap-3 mt-4">
           <p className="text-sm text-foreground/70">EBITDA positive at USD 4M/month processing volume. Targeted early 2027.</p>
-          <Button variant="accent">Partner with Pesaswap</Button>
+          <Button variant="accent">Schedule a call</Button>
         </div>
       </SlideEffect>
     </div>

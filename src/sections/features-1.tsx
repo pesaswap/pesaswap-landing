@@ -38,7 +38,7 @@ export default function Features1() {
             <div className="p-2">
               <Zap size={28} className="text-accent mb-4" />
               <h3 className="text-xl md:text-title text-on-primary font-semibold font-[family-name:var(--font-display)]">Smart Routing</h3>
-              <p className="mt-3 text-on-primary/80 leading-relaxed">Intelligent transaction routing across 15+ direct MNO and bank integrations. Automated failover and success rate optimisation across every corridor.</p>
+              <p className="mt-3 text-on-primary/80 leading-relaxed">Intelligent transaction routing across 15 direct MNO and bank integrations. Automated failover and success rate optimisation across every corridor.</p>
             </div>
           </Card>
         </SlideEffect>

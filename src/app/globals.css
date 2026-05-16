@@ -44,6 +44,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
 
+@keyframes orchestrationGlow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%      { opacity: 1.0; transform: scale(1.08); }
+}
+
+/* Architecture diagram: dashes flow in the direction of path traversal.
+   Dasharray is "3 8" (11px loop) — offset of -11px = one seamless loop. */
+@keyframes archFlow {
+  to { stroke-dashoffset: -11; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
