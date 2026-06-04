@@ -6,15 +6,17 @@ import Features4 from "@/sections/features-4";
 import Footer from "@/sections/footer";
 import Hero from "@/sections/hero";
 import Pricing from "@/sections/pricing";
+import SdkFlow from "@/sections/sdk-flow";
 import Testimonials from "@/sections/testimonials";
 
 export default function HomePage() {
   return (
-    <main id="main-content" className="px-4 xl:px-0 max-w-5xl mx-auto space-y-20 sm:space-y-24 md:space-y-32 lg:space-y-40 scroll-smooth">
+    <main id="main-content" className="px-4 xl:px-0 max-w-5xl mx-auto space-y-14 sm:space-y-16 md:space-y-20 lg:space-y-24 scroll-smooth">
       <Hero />
       <Features1 />
       <Features3 />
       <Features4 />
+      <SdkFlow />
       <Testimonials />
       <Pricing />
       <FAQ />

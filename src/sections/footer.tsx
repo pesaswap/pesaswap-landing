@@ -5,9 +5,11 @@ import Link from "next/link"
 
 const settings = {
   links: [
-    { title: 'Features', href: '#features' },
+    { title: 'Platform', href: '#features' },
+    { title: 'Developers', href: '#sdk' },
     { title: 'Revenue Model', href: '#pricing' },
     { title: 'FAQ', href: '#faq' },
+    { title: 'Docs', href: 'https://docs.pesaswap.io/introduction', external: true },
     { title: 'Contact', href: 'mailto:info@pesaswap.com' },
   ],
   locations: 'Nairobi, Kenya  ·  Dar es Salaam, Tanzania  ·  Kampala, Uganda',
@@ -28,7 +30,12 @@ export default function Footer() {
         {/* Nav Links */}
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
           {settings.links.map(link => (
-            <Link key={link.title} href={link.href} className="text-on-primary/50 hover:text-on-primary transition-colors duration-200">{link.title}</Link>
+            <Link
+              key={link.title}
+              href={link.href}
+              {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className="text-on-primary/50 hover:text-on-primary transition-colors duration-200"
+            >{link.title}</Link>
           ))}
         </div>
 

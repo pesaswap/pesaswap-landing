@@ -11,7 +11,7 @@ const settings = {
     text: 'THE INFRASTRUCTURE',
   },
   title: 'Beyond Payment Processing.',
-  description: 'Pesaswap enables platforms to operate across local payment networks with optimized routing, instant FX settlement, and centralized reconciliation — all through a single API integration.',
+  description: 'Pesaswap enables platforms to operate across local payment networks with optimized routing, instant FX settlement, and centralized reconciliation, all through a single API integration.',
 }
 
 export default function Features1() {
