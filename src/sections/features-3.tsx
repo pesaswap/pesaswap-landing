@@ -25,19 +25,19 @@ export default function Features3() {
       {/* Full-bleed cream background */}
       <div
         className="absolute inset-0 -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] bg-secondary"
-        style={{ top: '-4rem', bottom: '-4rem' }}
+        style={{ top: '-2rem', bottom: '-2rem' }}
       />
       {/* Top + bottom hairline accents like the reference illustration */}
       <div
         className="absolute -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] h-px bg-accent/60"
-        style={{ top: '-4rem' }}
+        style={{ top: '-2rem' }}
       />
       <div
         className="absolute -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] h-px bg-accent/60"
-        style={{ bottom: '-4rem' }}
+        style={{ bottom: '-2rem' }}
       />
 
-      <div className="relative z-10 py-16 md:py-24 space-y-6 sm:space-y-7 md:space-y-8 lg:space-y-10 mx-auto">
+      <div className="relative z-10 py-10 md:py-12 space-y-6 sm:space-y-7 md:space-y-8 lg:space-y-10 mx-auto">
         {/* Badge */}
         <SlideEffect>
           <div className="flex items-center h-8 text-ink text-[12px] md:text-[14px] bg-primary/10 border border-primary/20 w-fit rounded-full mx-auto font-[family-name:var(--font-body)]">
