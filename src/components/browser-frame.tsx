@@ -13,6 +13,8 @@ type BrowserFrameProps = {
   className?: string
   imageClassName?: string
   priority?: boolean
+  /** Responsive sizes hint so the browser fetches a right-sized image */
+  sizes?: string
 }
 
 /**
@@ -28,6 +30,7 @@ export default function BrowserFrame({
   className,
   imageClassName,
   priority = false,
+  sizes = "(max-width: 1024px) 100vw, 512px",
 }: BrowserFrameProps) {
   return (
     <div
@@ -55,6 +58,7 @@ export default function BrowserFrame({
         width={width}
         height={height}
         priority={priority}
+        sizes={sizes}
         className={cn("w-full h-auto block", imageClassName)}
       />
     </div>

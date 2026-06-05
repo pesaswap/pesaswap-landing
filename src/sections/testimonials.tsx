@@ -60,7 +60,7 @@ const settings = {
     },
     {
       name: 'Co-op Bank',
-      quote: "Co-op Bank distributes Pesaswap-powered QR to their merchant base. Bank distribution network equals instant local merchant coverage at zero CAC.",
+      quote: "Co-op Bank distributes Pesaswap-powered QR to its merchant base. Its distribution network means instant local merchant coverage at zero CAC.",
       role: 'Bank · QR Distribution',
     },
   ]

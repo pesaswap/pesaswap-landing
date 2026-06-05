@@ -13,12 +13,11 @@ const settings = {
     { name: 'Platform', href: '#features' },
     { name: 'Developers', href: '#sdk' },
     { name: 'Pricing', href: '#pricing' },
-    { name: 'FAQ', href: '#faq' },
     { name: 'Docs', href: 'https://docs.pesaswap.io/introduction', external: true },
   ],
   cta: {
-    content: 'Talk to our team',
-    href: '#contact'
+    content: 'Login',
+    href: 'https://app.pesaswap.io/login'
   }
 }
 

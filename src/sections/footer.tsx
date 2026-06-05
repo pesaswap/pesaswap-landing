@@ -10,7 +10,7 @@ const settings = {
     { title: 'Revenue Model', href: '#pricing' },
     { title: 'FAQ', href: '#faq' },
     { title: 'Docs', href: 'https://docs.pesaswap.io/introduction', external: true },
-    { title: 'Contact', href: 'mailto:info@pesaswap.com' },
+    { title: 'Contact', href: 'mailto:info@pesaswap.com,support@pesaswap.com?subject=Pesaswap%20enquiry' },
   ],
   locations: 'Nairobi, Kenya  ·  Dar es Salaam, Tanzania  ·  Kampala, Uganda',
   copyright: '© 2026 Pesaswap Ltd. All rights reserved.',

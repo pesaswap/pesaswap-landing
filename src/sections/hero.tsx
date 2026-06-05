@@ -8,8 +8,8 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const settings = {
-  headline: 'The Rail Powering Cross-Border Commerce into Africa.',
-  subheadline: 'B2B2X payment orchestration for Africa. Smart routing, instant auto-failover, and real-time FX settlement, connecting every platform to every African payment rail through a single API.',
+  headline: 'The Switch Powering Cross-Border Commerce into Africa.',
+  subheadline: 'B2B2X payment orchestration for Africa. Smart routing, instant auto-failover, and real-time FX settlement connect every platform to every African payment rail through a single API.',
   mainCTA: {
     content: 'Talk to our team',
     href: '#contact'
