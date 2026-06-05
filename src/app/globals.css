@@ -16,14 +16,14 @@
   --color-on-primary: #FAFBFA;
   --color-success: #2D8F6F;
 
-  --font-display: "Inter", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-display: var(--font-sora), "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-sora), "Sora", ui-sans-serif, system-ui, sans-serif;
 
   --text-base: 17px;
   --text-link: 15px;
   --text-header: clamp(1.75rem, 4vw, 3.5rem);
   --text-title: clamp(1.25rem, 2vw, 1.75rem);
-  --text-hero: clamp(2.5rem, 6vw, 5rem);
+  --text-hero: clamp(2.75rem, 6.8vw, 6rem);
   --text-label: 0.8125rem;
 }
 

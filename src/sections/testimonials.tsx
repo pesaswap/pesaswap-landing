@@ -4,15 +4,14 @@ import Badge from "@/components/badge"
 import Card from "@/components/card"
 import Counter from "@/components/counter"
 import SlideEffect from "@/components/slide-effect"
-import TextRevealEffect from "@/components/text-reveal-effect"
 
 const settings = {
   badge: {
-    number: 4,
+    number: 5,
     text: 'TRACTION',
   },
   title: 'One switch. Every kind of partner.',
-  description: 'Payments infrastructure designed for platforms — simple to plug in, built to scale.',
+  description: 'Payments infrastructure designed for platforms. Simple to plug in, built to scale.',
   stats: [
     {
       value: 120,
@@ -56,12 +55,12 @@ const settings = {
     },
     {
       name: 'Nala',
-      quote: "Nala routes consumer remittance into East Africa through Pesaswap — the settlement and reconciliation layer beneath every transfer.",
+      quote: "Nala routes consumer remittance into East Africa through Pesaswap, the settlement and reconciliation layer beneath every transfer.",
       role: 'Cross-border remittance',
     },
     {
       name: 'Co-op Bank',
-      quote: "Co-op Bank distributes Pesaswap-powered QR to their merchant base. Bank distribution network equals instant local merchant coverage at zero CAC.",
+      quote: "Co-op Bank distributes Pesaswap-powered QR to its merchant base. Its distribution network means instant local merchant coverage at zero CAC.",
       role: 'Bank · QR Distribution',
     },
   ]
@@ -69,14 +68,16 @@ const settings = {
 
 export default function Testimonials() {
   return (
-    <div id='testimonials' className="space-y-5 sm:space-y-6 md:space-y-6 lg:space-y-8 mx-auto text-center">
+    <div id='testimonials' className="space-y-6 sm:space-y-7 md:space-y-8 lg:space-y-10 mx-auto text-center">
       {/* Badge */}
       <SlideEffect>
         <Badge number={settings.badge.number} text={settings.badge.text} />
       </SlideEffect>
 
       {/* Title */}
-      <TextRevealEffect className="text-2xl md:text-4xl lg:text-header text-ink font-semibold leading-[1.1] font-[family-name:var(--font-display)] tracking-tight">{settings.title}</TextRevealEffect>
+      <SlideEffect>
+        <h2 className="text-2xl md:text-4xl lg:text-header font-semibold leading-[1.1] text-ink font-[family-name:var(--font-display)] tracking-tight max-w-[22ch] mx-auto">{settings.title}</h2>
+      </SlideEffect>
 
       {/* Description */}
       <SlideEffect className="px-2 sm:px-10 md:px-0 w-full md:max-w-3/4 mx-auto text-sm lg:text-base max-w-[65ch]">{settings.description}</SlideEffect>

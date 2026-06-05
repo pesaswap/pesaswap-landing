@@ -10,14 +10,14 @@ import { useState } from "react"
 
 const settings = {
   navLinks: [
-    { name: 'Home', href: '/' },
-    { name: 'Features', href: '#features' },
+    { name: 'Platform', href: '#features' },
+    { name: 'Developers', href: '#sdk' },
     { name: 'Pricing', href: '#pricing' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Docs', href: 'https://docs.pesaswap.io/introduction', external: true },
   ],
   cta: {
-    content: 'Get started',
-    href: '#'
+    content: 'Login',
+    href: 'https://app.pesaswap.io/login'
   }
 }
 
@@ -41,7 +41,12 @@ export default function Navbar() {
         <ul className="flex items-center justify-center gap-6 text-on-primary font-medium select-none text-[15px]">
           {settings.navLinks.map(link => (
             <li key={link.name}>
-              <Link href={link.href} title={link.name} className="hover:opacity-70 transition-opacity duration-200">{link.name}</Link>
+              <Link
+                href={link.href}
+                title={link.name}
+                {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="hover:opacity-70 transition-opacity duration-200"
+              >{link.name}</Link>
             </li>
           ))}
         </ul>
@@ -80,7 +85,13 @@ export default function Navbar() {
               <ul className="flex flex-col space-y-2 text-on-primary font-medium select-none text-base">
                 {settings.navLinks.map(link => (
                   <li key={link.name}>
-                    <Link href={link.href} title={link.name} onClick={toggleMenu} className="block py-2">{link.name}</Link>
+                    <Link
+                      href={link.href}
+                      title={link.name}
+                      onClick={toggleMenu}
+                      {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      className="block py-2"
+                    >{link.name}</Link>
                   </li>
                 ))}
               </ul>

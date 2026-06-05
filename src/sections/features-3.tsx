@@ -16,7 +16,7 @@ const settings = {
   description:
     'One unified API. Smart routing across mobile money, cards, and bank rails. Whitelabel, secure, sub-2s failover.',
   closer:
-    'Every merchant above uses Pesaswap to reach every rail below — through one integration, one contract, one reconciliation file.',
+    'Every merchant above uses Pesaswap to reach every rail below, through one integration, one contract, one reconciliation file.',
 }
 
 export default function Features3() {
@@ -25,23 +25,23 @@ export default function Features3() {
       {/* Full-bleed cream background */}
       <div
         className="absolute inset-0 -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] bg-secondary"
-        style={{ top: '-4rem', bottom: '-4rem' }}
+        style={{ top: '-2rem', bottom: '-2rem' }}
       />
       {/* Top + bottom hairline accents like the reference illustration */}
       <div
         className="absolute -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] h-px bg-accent/60"
-        style={{ top: '-4rem' }}
+        style={{ top: '-2rem' }}
       />
       <div
         className="absolute -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] h-px bg-accent/60"
-        style={{ bottom: '-4rem' }}
+        style={{ bottom: '-2rem' }}
       />
 
-      <div className="relative z-10 py-16 md:py-24 space-y-8 md:space-y-10 mx-auto">
+      <div className="relative z-10 py-10 md:py-12 space-y-6 sm:space-y-7 md:space-y-8 lg:space-y-10 mx-auto">
         {/* Badge */}
         <SlideEffect>
           <div className="flex items-center h-8 text-ink text-[12px] md:text-[14px] bg-primary/10 border border-primary/20 w-fit rounded-full mx-auto font-[family-name:var(--font-body)]">
-            <div className="h-8 w-8 flex items-center justify-center bg-accent text-ink rounded-full font-medium text-[14px] md:text-[16px]">
+            <div className="h-8 w-8 flex items-center justify-center bg-primary text-on-primary rounded-full font-medium text-[14px] md:text-[16px]">
               {settings.badge.number}
             </div>
             <div className="uppercase tracking-[0.06em] py-2 px-4 w-fit font-medium">{settings.badge.text}</div>
@@ -50,7 +50,7 @@ export default function Features3() {
 
         {/* Title */}
         <SlideEffect>
-          <h2 className="text-2xl md:text-4xl lg:text-header font-bold leading-[1.1] text-ink font-[family-name:var(--font-display)] tracking-tight text-center max-w-[18ch] md:max-w-none mx-auto">
+          <h2 className="text-2xl md:text-4xl lg:text-header font-semibold leading-[1.1] text-ink font-[family-name:var(--font-display)] tracking-tight text-center max-w-[18ch] md:max-w-none mx-auto">
             {settings.title}
           </h2>
         </SlideEffect>

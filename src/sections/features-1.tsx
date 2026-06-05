@@ -11,7 +11,7 @@ const settings = {
     text: 'THE INFRASTRUCTURE',
   },
   title: 'Beyond Payment Processing.',
-  description: 'Pesaswap enables platforms to operate across local payment networks with optimized routing, instant FX settlement, and centralized reconciliation — all through a single API integration.',
+  description: 'Pesaswap enables platforms to operate across local payment networks with optimised routing, instant FX settlement, and centralised reconciliation, all through a single API integration.',
 }
 
 export default function Features1() {
@@ -51,7 +51,7 @@ export default function Features1() {
                 <RefreshCw size={24} className="text-primary mt-1 shrink-0" />
                 <div>
                   <h3 className="text-xl md:text-title text-ink font-semibold font-[family-name:var(--font-display)]">Real-Time FX Settlement</h3>
-                  <p className="mt-2 leading-relaxed">Cross-border FX in minutes, not days. UK/US/EU to East Africa wallet or bank account. FX spread is the most profitable revenue rail.</p>
+                  <p className="mt-2 leading-relaxed">Cross-border FX in minutes, not days. UK, US, or EU to an East African wallet or bank account. FX spread is the most profitable revenue rail.</p>
                 </div>
               </div>
             </Card>
@@ -63,7 +63,7 @@ export default function Features1() {
                 <Shield size={24} className="text-primary mt-1 shrink-0" />
                 <div>
                   <h3 className="text-xl md:text-title text-ink font-semibold font-[family-name:var(--font-display)]">3-Way Reconciliation</h3>
-                  <p className="mt-2 leading-relaxed">Automated reconciliation across bank ledger, MNO transaction log, and merchant statement. Zero manual settlement work. Full audit trail.</p>
+                  <p className="mt-2 leading-relaxed">Automated reconciliation across the bank ledger, MNO transaction log, and merchant statement. Zero manual settlement work. Full audit trail.</p>
                 </div>
               </div>
             </Card>

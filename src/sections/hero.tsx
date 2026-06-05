@@ -8,8 +8,8 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const settings = {
-  headline: 'The Rail Powering Cross-Border Commerce into Africa.',
-  subheadline: 'B2B2X payment orchestration for Africa. Smart routing, instant auto-failover, and real-time FX settlement — connecting every platform to every African payment rail through a single API.',
+  headline: 'The Switch Powering Cross-Border Commerce into Africa.',
+  subheadline: 'B2B2X payment orchestration for Africa. Smart routing, instant auto-failover, and real-time FX settlement connect every platform to every African payment rail through a single API.',
   mainCTA: {
     content: 'Talk to our team',
     href: '#contact'
@@ -32,15 +32,15 @@ export default function Hero() {
       {/* Solid hero background - breaks out of container */}
       <div
         className="absolute inset-0 -left-4 -right-4 xl:-left-[calc((100vw-64rem)/2)] xl:-right-[calc((100vw-64rem)/2)] -top-4 bg-primary"
-        style={{ bottom: '-3rem' }}
+        style={{ bottom: '0' }}
       />
 
-      <div className="relative z-10 space-y-12 md:space-y-16 lg:space-y-20">
+      <div className="relative z-10 space-y-10 md:space-y-12 lg:space-y-14">
         <Navbar />
 
-        <section className="flex flex-col gap-8 lg:gap-10 items-center text-center pb-8 md:pb-12">
+        <section className="flex flex-col gap-7 lg:gap-8 items-center text-center pb-6 md:pb-10">
           {/* Headline */}
-          <h1 className="text-on-primary text-4xl md:text-6xl lg:text-hero font-bold tracking-tight leading-[1.05] xl:max-w-4/5 font-[family-name:var(--font-display)]">
+          <h1 className="text-on-primary text-5xl md:text-7xl lg:text-hero font-extrabold tracking-[-0.03em] leading-[1.02] xl:max-w-4/5 font-[family-name:var(--font-display)]">
             <TextBlurEffect className='text-on-primary'>{settings.headline}</TextBlurEffect>
           </h1>
 
@@ -89,7 +89,6 @@ export default function Hero() {
               ))}
             </div>
           </SlideEffect>
-
         </section>
       </div>
     </div>

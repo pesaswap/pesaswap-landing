@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
+import { Sora } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/providers/lenis";
 
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-sora",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Pesaswap — Payment Orchestration Infrastructure for East Africa",
+  title: "Pesaswap · Payment Orchestration Infrastructure for East Africa",
   description: "The rail powering cross-border commerce into Africa. Smart routing, real-time FX settlement, and 3-way automated reconciliation across 15+ direct integrations."
 };
 
@@ -13,15 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={sora.variable} suppressHydrationWarning>
       <body
         className="antialiased w-full min-h-screen overflow-x-hidden"
       >

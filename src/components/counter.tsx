@@ -14,7 +14,6 @@ export default function Counter({ value, suffix = '', prefix = '' }: { value: nu
     const duration = 1500
     const steps = 40
     const stepDuration = duration / steps
-    const increment = value / steps
     let current = 0
     let step = 0
 

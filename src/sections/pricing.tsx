@@ -1,11 +1,16 @@
 'use client'
 
+import Badge from "@/components/badge"
 import Card from "@/components/card"
 import SlideEffect from "@/components/slide-effect"
 import { Button } from "@/components/ui/button"
 import { CircleCheck } from "lucide-react"
 
 const settings = {
+  badge: {
+    number: 6,
+    text: 'REVENUE MODEL',
+  },
   title: 'Revenue Model',
   description: 'Gross-margin positive from day one. Four compounding revenue rails that scale with volume. No consumer acquisition cost.',
   streams: [
@@ -63,6 +68,11 @@ const settings = {
 export default function Pricing() {
   return (
     <div id='pricing' className="space-y-6 sm:space-y-7 md:space-y-8 lg:space-y-10 mx-auto text-center">
+      {/* Badge */}
+      <SlideEffect>
+        <Badge number={settings.badge.number} text={settings.badge.text} />
+      </SlideEffect>
+
       {/* Title */}
       <SlideEffect>
         <h2 className="text-2xl md:text-4xl lg:text-header font-semibold leading-[1.1] text-ink font-[family-name:var(--font-display)] tracking-tight">{settings.title}</h2>

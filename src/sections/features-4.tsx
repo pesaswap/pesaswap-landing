@@ -3,7 +3,6 @@
 import Badge from "@/components/badge"
 import Card from "@/components/card"
 import SlideEffect from "@/components/slide-effect"
-import TextRevealEffect from "@/components/text-reveal-effect"
 import { Check, X } from "lucide-react"
 
 const settings = {
@@ -29,7 +28,7 @@ const settings = {
       label: 'Open Orchestration Layer',
       names: 'Pesaswap',
       points: [
-        'Merchant chooses any provider, we route optimally',
+        'Merchant chooses any provider; we route optimally',
         'Automated failover across 15 direct integrations',
         'One API, every corridor across 4 markets',
         'Real-time FX settlement with automated reconciliation',
@@ -48,7 +47,9 @@ export default function Features4() {
       </SlideEffect>
 
       {/* Title */}
-      <TextRevealEffect className="text-2xl md:text-4xl lg:text-header text-ink font-semibold leading-[1.1] font-[family-name:var(--font-display)] tracking-tight">{settings.title}</TextRevealEffect>
+      <SlideEffect>
+        <h2 className="text-2xl md:text-4xl lg:text-header font-semibold leading-[1.1] text-ink font-[family-name:var(--font-display)] tracking-tight max-w-[22ch] mx-auto">{settings.title}</h2>
+      </SlideEffect>
 
       {/* Description */}
       <SlideEffect className="px-2 sm:px-10 md:px-0 w-full md:max-w-3/4 mx-auto text-sm lg:text-base max-w-[65ch]">{settings.description}</SlideEffect>
