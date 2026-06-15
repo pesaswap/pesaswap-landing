@@ -114,7 +114,6 @@ export default function Pricing() {
       {/* Bottom CTA */}
       <SlideEffect>
         <div className="flex flex-col items-center gap-3 mt-4">
-          <p className="text-sm text-foreground/70">EBITDA positive at USD 4M/month processing volume. Targeted early 2027.</p>
           <Button variant="accent">Schedule a call</Button>
         </div>
       </SlideEffect>

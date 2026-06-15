@@ -13,8 +13,9 @@ const settings = {
     { title: 'Contact', href: 'mailto:info@pesaswap.com,support@pesaswap.com?subject=Pesaswap%20enquiry' },
   ],
   locations: 'Nairobi, Kenya  ·  Dar es Salaam, Tanzania  ·  Kampala, Uganda',
+  address: 'Regus Office Suites, 4th Floor, Laiboni Center, Kilimani, Nairobi, Kenya',
   copyright: '© 2026 Pesaswap Ltd. All rights reserved.',
-  licences: ['BoT Licensed (Tanzania)', 'BoU Licensed (Uganda)', 'CBK Pending (Kenya)', 'NBR Pending (Rwanda)'],
+  licences: ['BoT Licensed (Tanzania)', 'BoU Licensed (Uganda)', 'CBK Pending (Kenya)'],
 }
 
 export default function Footer() {
@@ -50,6 +51,9 @@ export default function Footer() {
 
         {/* Locations */}
         <p className="text-xs text-on-primary/30 text-center">{settings.locations}</p>
+
+        {/* Office address */}
+        <p className="text-xs text-on-primary/40 text-center max-w-md">{settings.address}</p>
 
         {/* Copyright */}
         <p className="text-center text-on-primary/30">{settings.copyright}</p>
