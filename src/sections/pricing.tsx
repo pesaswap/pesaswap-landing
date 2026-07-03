@@ -114,7 +114,11 @@ export default function Pricing() {
       {/* Bottom CTA */}
       <SlideEffect>
         <div className="flex flex-col items-center gap-3 mt-4">
-          <Button variant="accent">Schedule a call</Button>
+          <Button variant="accent" asChild>
+  		<a href="https://cal.eu/pesaswap/schedule-a-discussion-with-ps" target="_blank" rel="noopener noreferrer">
+    		Schedule a call
+ 	 </a>
+	</Button>
         </div>
       </SlideEffect>
     </div>
